@@ -4,8 +4,8 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 
 # Create your views here.
-def login(request):
-    return render(request,'login.html')
+def login_main(request):
+    return render(request,'login_main.html')
     
 def home(request):
     usrname = request.POST['username']
