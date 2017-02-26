@@ -1,9 +1,9 @@
 <html>
 <body>
     <div id="content-container" class="container p-none">
-        <div class="lgn-container col-lg-8">
+        <div class="lgn-container col-lg-8">   
             <form id="login-form" method="post" 
-                  action="/register_successful">
+                  action="/home">
                 {% csrf_token %}
                 <table class="table">
                     <tr>
@@ -16,11 +16,6 @@
                         <td><input id="id_password" name="password" 
                                    type="password" class="form-control"></td>
                     </tr>
-                    <tr>
-                        <td><label for="id_email">Email_id</label></td>
-                        <td><input id="id_email" name="email_id" 
-                                   type="text" class="form-control"></td>
-                    </tr>
                 </table>
                 {% if form.errors %}
                     <p class=" label label-danger">
@@ -29,11 +24,15 @@
                     </p>
                 {% endif %}
 
-                <input type="submit" value="Register" 
+                <input type="submit" value="Login" 
                        class="btn btn-primary pull-right" />
                 <input type="hidden" name="next" value="{{ next }}" />
                 
             </form>
+           <p> <a href = "/signup_form" type = "button">signup_form</a></p>
+           <p><a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a></p>
+            <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">Login with Google</a>
+            
         </div>
     </div>
  </body>
