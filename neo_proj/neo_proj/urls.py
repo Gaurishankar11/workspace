@@ -23,9 +23,11 @@ from neo_app import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^login/$', views.login),
+    url(r'^login_main/$', views.login_main),
     url(r'^home$', views.home),
     url(r'^signup_form', views.signup_form),
     url(r'^register_successful', views.register_successful),
+    url('', include('social.apps.django_app.urls', namespace='social')),
+    url('', include('django.contrib.auth.urls', namespace='auth')),
     #url(r'^logout/$',views.logout, name='logout'),
 ]
