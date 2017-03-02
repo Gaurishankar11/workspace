@@ -57,7 +57,7 @@ ROOT_URLCONF = 'neo_proj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/gaurishankar/workspace/neo_proj/templates/'],
+        'DIRS': ['/home/neosoft/Downloads/workspace-test_code/neo_proj/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,3 +115,5 @@ LOGIN_REDIRECT_URL = '/'
 
 SOCIAL_AUTH_FACEBOOK_KEY = 592279247636182
 SOCIAL_AUTH_FACEBOOK_SECRET = 'fbc1bb5c5645865529116937fc4360a2'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '476872315414-v5hfc7lvg8rr0cjasmp7ues0vnhgijml.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'pXy0fOAsHYq37YmZKRWwhPLT'
